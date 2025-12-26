@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 14px;
+}
+
+html, body {
+  @apply bg-background text-foreground antialiased;
+}
+
+a { @apply underline-offset-4 hover:underline; }
+
+.container-narrow { @apply max-w-5xl mx-auto px-4 sm:px-6; }
+.container-wide { @apply max-w-7xl mx-auto px-4 sm:px-6; }
+
+.card { @apply bg-card text-card-foreground rounded-lg border border-border shadow-sm; }
+.section { @apply py-12 sm:py-16; }
+
+/* Smooth section fade for first load */
+[data-anim="fade"] { animation: fadeIn 600ms ease-out both; }
+
